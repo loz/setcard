@@ -7,23 +7,29 @@
 //
 
 #import "SetCardViewController.h"
+#import "SetCardView.h"
 
 @interface SetCardViewController ()
-
+@property (weak, nonatomic) IBOutlet SetCardView *setCardView;
 @end
 
 @implementation SetCardViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (IBAction)setColour:(UISegmentedControl *)sender {
+    self.setCardView.colour = sender.selectedSegmentIndex;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)setShape:(UISegmentedControl *)sender {
+    self.setCardView.shape = sender.selectedSegmentIndex;
 }
+
+- (IBAction)setFill:(UISegmentedControl *)sender {
+    self.setCardView.fill = sender.selectedSegmentIndex;
+}
+
+- (IBAction)setCount:(UISegmentedControl *)sender {
+    self.setCardView.count = sender.selectedSegmentIndex;
+}
+
 
 @end

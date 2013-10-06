@@ -21,6 +21,7 @@
 		AEEFCD731801AE1C0003E0D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEFCD551801AE1C0003E0D7 /* UIKit.framework */; };
 		AEEFCD7B1801AE1C0003E0D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEEFCD791801AE1C0003E0D7 /* InfoPlist.strings */; };
 		AEEFCD7D1801AE1C0003E0D7 /* SetCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFCD7C1801AE1C0003E0D7 /* SetCardTests.m */; };
+		AEEFCD881801B19D0003E0D7 /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEFCD871801B19D0003E0D7 /* SetCardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		AEEFCD781801AE1C0003E0D7 /* SetCardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SetCardTests-Info.plist"; sourceTree = "<group>"; };
 		AEEFCD7A1801AE1C0003E0D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AEEFCD7C1801AE1C0003E0D7 /* SetCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetCardTests.m; sourceTree = "<group>"; };
+		AEEFCD861801B19D0003E0D7 /* SetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardView.h; sourceTree = "<group>"; };
+		AEEFCD871801B19D0003E0D7 /* SetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +115,9 @@
 		AEEFCD571801AE1C0003E0D7 /* SetCard */ = {
 			isa = PBXGroup;
 			children = (
-				AEEFCD601801AE1C0003E0D7 /* SetCardAppDelegate.h */,
-				AEEFCD611801AE1C0003E0D7 /* SetCardAppDelegate.m */,
 				AEEFCD631801AE1C0003E0D7 /* Main.storyboard */,
+				AEEFCD861801B19D0003E0D7 /* SetCardView.h */,
+				AEEFCD871801B19D0003E0D7 /* SetCardView.m */,
 				AEEFCD661801AE1C0003E0D7 /* SetCardViewController.h */,
 				AEEFCD671801AE1C0003E0D7 /* SetCardViewController.m */,
 				AEEFCD691801AE1C0003E0D7 /* Images.xcassets */,
@@ -126,6 +129,8 @@
 		AEEFCD581801AE1C0003E0D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AEEFCD601801AE1C0003E0D7 /* SetCardAppDelegate.h */,
+				AEEFCD611801AE1C0003E0D7 /* SetCardAppDelegate.m */,
 				AEEFCD591801AE1C0003E0D7 /* SetCard-Info.plist */,
 				AEEFCD5A1801AE1C0003E0D7 /* InfoPlist.strings */,
 				AEEFCD5D1801AE1C0003E0D7 /* main.m */,
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEEFCD5E1801AE1C0003E0D7 /* main.m in Sources */,
+				AEEFCD881801B19D0003E0D7 /* SetCardView.m in Sources */,
 				AEEFCD681801AE1C0003E0D7 /* SetCardViewController.m in Sources */,
 				AEEFCD621801AE1C0003E0D7 /* SetCardAppDelegate.m in Sources */,
 			);
