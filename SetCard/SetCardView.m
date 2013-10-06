@@ -78,25 +78,56 @@
 
 -(void)drawSquiggle {
     UIBezierPath *squiggle = [[UIBezierPath alloc] init];
-    [squiggle moveToPoint:CGPointMake(0.0, 0.0)];
-    [squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth],
-                                         [self shapeHeight] * 0.3)
-                controlPoint:[self shapeTopRight]];
-    //[squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth] * 0.8,
-    //                                     [self shapeHeight] * 0.7)
-    //            controlPoint:[self shapeTopRight]];
-    [squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth],
-                                         [self shapeHeight])
-                controlPoint:[self shapeBottomLeft]];
-    [squiggle addQuadCurveToPoint:CGPointMake(0.0,
-                                         [self shapeHeight] * 0.7)
-                controlPoint:[self shapeBottomLeft]];
-    [squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth] * 0.2,
-                                         [self shapeHeight] * 0.3)
-                controlPoint:[self shapeBottomLeft]];
-    [squiggle addQuadCurveToPoint:CGPointMake(0.0,
-                                              0.0)
-                     controlPoint:[self shapeBottomLeft]];
+    /*   a
+       f_\\_b
+       e_//_c
+         \\
+          d
+    */
+    
+    //a
+    [squiggle moveToPoint:CGPointMake([self shapeWidth] * 0.25,
+                                      [self shapeHeight] * 0.00)];
+    
+    //a-b
+    [squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth] * 1.00,
+                                              [self shapeHeight] * 0.25)
+                     controlPoint:CGPointMake([self shapeWidth] * 0.90,
+                                              [self shapeHeight] * 0.00)];
+    
+    //b-c
+    [squiggle addCurveToPoint:CGPointMake([self shapeWidth] * 0.90,
+                                          [self shapeHeight] * 0.75)
+                controlPoint1:CGPointMake([self shapeWidth] * 1.20,
+                                          [self shapeHeight] * 0.50)
+                controlPoint2:CGPointMake([self shapeWidth] * 0.60,
+                                          [self shapeHeight] * 0.50)];
+    
+    //c-d
+    [squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth] * 0.75,
+                                              [self shapeHeight] * 1.00)
+                     controlPoint:CGPointMake([self shapeWidth] * 1.25,
+                                              [self shapeHeight] * 1.00)];
+    
+    //d-e
+    [squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth] * 0.00,
+                                              [self shapeHeight] * 0.75)
+                     controlPoint:CGPointMake([self shapeWidth] * 0.10,
+                                              [self shapeHeight] * 1.00)];
+    
+    //e-f
+    [squiggle addCurveToPoint:CGPointMake([self shapeWidth] * 0.10,
+                                          [self shapeHeight] * 0.25)
+                controlPoint1:CGPointMake([self shapeWidth] * -0.10,
+                                          [self shapeHeight] * 0.50)
+                controlPoint2:CGPointMake([self shapeWidth] * 0.40,
+                                          [self shapeHeight] * 0.50)];
+    
+    //f-a
+    [squiggle addQuadCurveToPoint:CGPointMake([self shapeWidth] * 0.25,
+                                              [self shapeHeight] * 0.00)
+                     controlPoint:CGPointMake([self shapeWidth] * -0.25,
+                                              [self shapeHeight] * 0.00)];
     [squiggle closePath];
     [squiggle fill];
 }
