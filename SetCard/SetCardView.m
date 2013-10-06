@@ -48,6 +48,10 @@
 }
 
 #pragma mark - Shape Draw Routines
+-(CGFloat) strokeWidth {
+    return self.bounds.size.width / 100.0;
+}
+
 -(void)drawShape {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
@@ -71,7 +75,7 @@
     UIColor *colour = [self shapeColour];
     [colour setStroke];
     [colour setFill];
-    shape.lineWidth = 2.5;
+    shape.lineWidth = [self strokeWidth];
     [shape stroke];
     
     //Shading
@@ -95,7 +99,7 @@
                 UIBezierPath *line = [UIBezierPath bezierPath];
                 [line moveToPoint:CGPointMake(xpos, 0.0)];
                 [line addLineToPoint:CGPointMake(xpos, [self shapeHeight])];
-                line.lineWidth = 2.5;
+                line.lineWidth = [self strokeWidth];
                 [line stroke];
             }
             break;
