@@ -193,19 +193,6 @@
     return squiggle;
 }
 
--(CGPoint)shapeTopRight {
-    return CGPointMake([self shapeWidth], 0.0);
-}
--(CGPoint)shapeBottomRight {
-    return CGPointMake([self shapeWidth], [self shapeHeight]);
-}
--(CGPoint)shapeTopLeft {
-    return CGPointMake(0.0, 0.0);
-}
--(CGPoint)shapeBottomLeft {
-    return CGPointMake(0.0, [self shapeHeight]);
-}
-     
 -(CGFloat)shapeWidth {
     return self.bounds.size.width * SHAPE_X_RATIO;
 }
