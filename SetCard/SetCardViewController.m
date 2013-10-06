@@ -28,7 +28,7 @@
 }
 
 - (IBAction)setCount:(UISegmentedControl *)sender {
-    self.setCardView.count = sender.selectedSegmentIndex;
+    self.setCardView.count = sender.selectedSegmentIndex + 1;
 }
 
 
